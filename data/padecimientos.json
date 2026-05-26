@@ -1,0 +1,20 @@
+[
+    {
+        "ID": "123456",
+        "Nombre": "Cancer",
+        "Tipo": "Crónico",
+        "Tratamiento": "1234 años"
+    },
+    {
+        "ID": "0987",
+        "Nombre": "Asma",
+        "Tipo": "Congénito",
+        "Tratamiento": "2 meses"
+    },
+    {
+        "ID": "9742",
+        "Nombre": "Tos",
+        "Tipo": "Crónico",
+        "Tratamiento": "2 meses"
+    }
+]
