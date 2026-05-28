@@ -16,16 +16,24 @@ class Padecimiento:
         self._id_padecimiento = id_padecimiento
         self._nombre = nombre
         self._tipo = tipo
-        self._tratamiento_prolongado = (tratamiento_prolongado)
+        self._tratamiento_prolongado = tratamiento_prolongado
 #=======================================================================================================================
-    def __str__(self):
-        """Retorna la informacion del objeto"""
-        return (
-            f"{self._id_padecimiento} "
-            f"{self._nombre}"
-            f"{self._tipo}"
-            f"{self._tratamiento_prolongado}"
-        )
+    # GETTERS/PROPERTIES
+    @property
+    def id_padecimiento(self):
+        return self._id_padecimiento
+
+    @property
+    def nombre(self):
+        return self._nombre
+
+    @property
+    def tipo(self):
+        return self._tipo
+
+    @property
+    def tratamiento_prolongado(self):
+        return self._tratamiento_prolongado
 #=======================================================================================================================
     def to_dict(self):
         """Convierte a diccionario"""

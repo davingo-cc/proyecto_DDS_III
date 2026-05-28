@@ -1,14 +1,32 @@
 [
     {
-        "ID": "12345",
-        "Nombre": "Operacion",
-        "Area": "Cirugia",
-        "Tipo": "Especializada"
+        "ID": "1",
+        "Nombre": "Medicina General",
+        "Área médica": "Clínica",
+        "Tipo": "General"
     },
     {
-        "ID": "987654",
-        "Nombre": "revision",
-        "Area": "odontologia",
+        "ID": "2",
+        "Nombre": "Pediatría",
+        "Área médica": "Clínica",
+        "Tipo": "General"
+    },
+    {
+        "ID": "3",
+        "Nombre": "Psicología",
+        "Área médica": "Mental",
+        "Tipo": "General"
+    },
+    {
+        "ID": "4",
+        "Nombre": "Nutrición",
+        "Área médica": "Preventiva",
+        "Tipo": "General"
+    },
+    {
+        "ID": "5",
+        "Nombre": "Odontología",
+        "Área médica": "Dental",
         "Tipo": "General"
     }
 ]

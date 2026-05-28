@@ -18,9 +18,10 @@ class ControladorEspecialidad:
         self._vista.btn_registrar.config(command = self.registrar)
         self._vista.btn_buscar.config(command = self.buscar_tipo)
         self._vista.btn_reporte.config(command = self.reporte_tipo)
+        self._vista.btn_eliminar.config(command = self.eliminar)
+        self._vista.btn_listar.config(command = self.listar)
         self.cargar_tabla()
 #=======================================================================================================================
-
     def registrar(self):
         """Registra las especialidades"""
         try:
@@ -39,7 +40,7 @@ class ControladorEspecialidad:
 #=======================================================================================================================
     def cargar_tabla(self):
         """Carga la tabla"""
-        datos = (self._servicio.listar())
+        datos = self._servicio.listar()
         self._vista.cargar_tabla(datos)
 #=======================================================================================================================
     def buscar_tipo(self):
@@ -58,3 +59,18 @@ class ControladorEspecialidad:
             )
         self._vista.mostrar_info('info', texto)
 #=======================================================================================================================
+    def eliminar(self):
+        """Cuando presiona eliminar llama a este método"""
+        lista = self._servicio.listar()
+        try:
+            id_especialidad = self._vista.obtener_id()
+            self._servicio.eliminar(id_especialidad)
+            self._vista.cargar_tabla(lista)
+        except Exception as error:
+            self._vista.mostrar_info('error', str(error))
+            self._vista.limpiar_campos()
+#=======================================================================================================================
+    def listar(self):
+        """Carga la tabla con los datos de los padecimientos"""
+        lista = self._servicio.listar()
+        self._vista.cargar_tabla(lista)

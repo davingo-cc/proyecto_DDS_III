@@ -1,0 +1,18 @@
+[
+    {
+        "cedula_paciente": "1",
+        "nombre": "David",
+        "telefono": "1",
+        "correo": "ddd@gmail.com",
+        "provincia": "Cartago",
+        "id_padecimiento": "22"
+    },
+    {
+        "cedula_paciente": "88",
+        "nombre": "Enzo Beja",
+        "telefono": "7899",
+        "correo": "enzo@gmail.com",
+        "provincia": "Alajuela",
+        "id_padecimiento": "666"
+    }
+]

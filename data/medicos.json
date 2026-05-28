@@ -1,0 +1,18 @@
+[
+    {
+        "cedula_medico": "45",
+        "nombre": "Mario Chang",
+        "telefono": "8888 si no te sirve esta chocho",
+        "correo": "marito@hotmail.com",
+        "provincia": "Alajuela",
+        "id_especialidad": "4"
+    },
+    {
+        "cedula_medico": "7",
+        "nombre": "Fernando Calisco",
+        "telefono": "75116",
+        "correo": "fer@gmail.com",
+        "provincia": "Limón",
+        "id_especialidad": "3"
+    }
+]

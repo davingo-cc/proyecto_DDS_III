@@ -1,20 +1,26 @@
 [
     {
-        "ID": "123456",
-        "Nombre": "Cancer",
-        "Tipo": "Crónico",
-        "Tratamiento": "1234 años"
-    },
-    {
         "ID": "0987",
         "Nombre": "Asma",
         "Tipo": "Congénito",
-        "Tratamiento": "2 meses"
+        "Tratamiento": "2/mes(es)"
     },
     {
         "ID": "9742",
         "Nombre": "Tos",
         "Tipo": "Crónico",
-        "Tratamiento": "2 meses"
+        "Tratamiento": "2/mes(es)"
+    },
+    {
+        "ID": "22",
+        "Nombre": "Resfriado",
+        "Tipo": "Agudo",
+        "Tratamiento": "No necesita"
+    },
+    {
+        "ID": "666",
+        "Nombre": "MUERTE",
+        "Tipo": "Otro",
+        "Tratamiento": "No necesita"
     }
 ]

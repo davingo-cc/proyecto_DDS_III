@@ -17,8 +17,10 @@ class ControladorPadecimiento:
         self._servicio = servicio
         self._vista.btn_registrar.config(command = self.registrar)
         self._vista.btn_buscar.config(command = self.buscar_tipo)
-        self._vista.btn_reporte1.config(command = self.reporte_tipo)
-        self._vista.btn_reporte2.config(command = self.reporte_tratamiento)
+        self._vista.btn_cantidad_por_tipo.config(command = self.reporte_tipo)
+        self._vista.btn_listar.config(command = self.listar)
+        self._vista.check_tratamiento.config(command = self.mostrar_tratamiento)
+        self._vista.btn_eliminar.config(command = self.eliminar)
         self.cargar_tabla()
 #=======================================================================================================================
     def registrar(self):
@@ -57,13 +59,24 @@ class ControladorPadecimiento:
             )
         self._vista.mostrar_info('info', texto)
 #=======================================================================================================================
-    def reporte_tratamiento(self):
-        """Reporte de tratamiento"""
-        datos = (self._servicio.reporte_tratamientos())
-        texto = ""
-        for indice in datos:
-            texto += (
-                f"{indice._nombre}\n"
-            )
-        self._vista.mostrar_info('info', texto)
+    def listar(self):
+        """Carga la tabla con los datos de los padecimientos"""
+        lista = self._servicio.listar()
+        self._vista.cargar_tabla(lista)
 #=======================================================================================================================
+    def mostrar_tratamiento(self):
+        """
+        Al presionar el checkbutton de tratamiento, llama al método de la vista que expande los detalles a ingresar
+        """
+        self._vista.mostrar_tratamiento()
+#=======================================================================================================================
+    def eliminar(self):
+        """Cuando presiona eliminar llama a este método"""
+        lista = self._servicio.listar()
+        try:
+            id_padecimiento = self._vista.obtener_id()
+            self._servicio.eliminar(id_padecimiento)
+            self._vista.cargar_tabla(lista)
+        except Exception as error:
+            self._vista.mostrar_info('error', str(error))
+            self._vista.limpiar_campos()
