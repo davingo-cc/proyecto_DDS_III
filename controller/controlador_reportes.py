@@ -7,11 +7,14 @@ Integrantes:
 -Enzo Bejarano
 -Windell Urroz Costés
 """
+from view.vista_reportes import VistaReportes
+
+
 #=======================================================================================================================
 class ControladorReportes:
     """Se crea la clase ControladorReportes"""
 #=======================================================================================================================
-    def __init__(self, vista, servicio):
+    def __init__(self, vista: VistaReportes, servicio):
         """Constructor que inicializa las instancias y conecta los botones"""
         self._vista = vista
         self._servicio = servicio
@@ -26,6 +29,7 @@ class ControladorReportes:
             self._vista.cargar_reporte1(lista)
         except Exception as error:
             self._vista.mostrar_info('error', str(error))
+            self._vista.limpiar_reporte1()
 #=======================================================================================================================
     def generar_reporte2(self):
         """Genera el reporte de padecimiento más frecuente por provincia"""
@@ -34,6 +38,7 @@ class ControladorReportes:
             self._vista.cargar_reporte2(lista)
         except Exception as error:
             self._vista.mostrar_info('error', str(error))
+            self._vista.limpiar_reporte2()
 #=======================================================================================================================
     def generar_reporte3(self):
         """Genera el reporte de especialidades más demandadas"""
@@ -42,3 +47,4 @@ class ControladorReportes:
             self._vista.cargar_reporte3(lista)
         except Exception as error:
             self._vista.mostrar_info('error', str(error))
+            self._vista.limpiar_reporte3()

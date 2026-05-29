@@ -1,0 +1,30 @@
+[
+    {
+        "id_cita": "1",
+        "cedula_paciente": "1",
+        "cedula_medico": "7",
+        "fecha": "04/Marzo/2027",
+        "motivo": "Motivo 1"
+    },
+    {
+        "id_cita": "2",
+        "cedula_paciente": "88",
+        "cedula_medico": "45",
+        "fecha": "04/Marzo/2027",
+        "motivo": "Resurreción"
+    },
+    {
+        "id_cita": "3",
+        "cedula_paciente": "88",
+        "cedula_medico": "45",
+        "fecha": "07/Febrero/2027",
+        "motivo": "Alergía"
+    },
+    {
+        "id_cita": "4",
+        "cedula_paciente": "2",
+        "cedula_medico": "7",
+        "fecha": "04/Marzo/2026",
+        "motivo": "Se me olvidó"
+    }
+]

@@ -14,5 +14,13 @@
         "correo": "enzo@gmail.com",
         "provincia": "Alajuela",
         "id_padecimiento": "666"
+    },
+    {
+        "cedula_paciente": "2",
+        "nombre": "Windell",
+        "telefono": "3456",
+        "correo": "win@.com",
+        "provincia": "San José",
+        "id_padecimiento": "9742"
     }
 ]

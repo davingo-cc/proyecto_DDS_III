@@ -160,3 +160,18 @@ class VistaReportes(tk.Frame):
             messagebox.showerror('Error', mensaje)
         else:
             messagebox.showinfo('Información', mensaje)
+
+    def limpiar_reporte1(self):
+        """Limpia la tabla del reporte 1"""
+        for fila in self.tabla_reporte1.get_children():
+            self.tabla_reporte1.delete(fila)
+    #=======================================================================================================================
+    def limpiar_reporte2(self):
+        """Limpia la tabla del reporte 2"""
+        for fila in self.tabla_reporte2.get_children():
+            self.tabla_reporte2.delete(fila)
+    #=======================================================================================================================
+    def limpiar_reporte3(self):
+        """Limpia la tabla del reporte 3"""
+        for fila in self.tabla_reporte3.get_children():
+            self.tabla_reporte3.delete(fila)
